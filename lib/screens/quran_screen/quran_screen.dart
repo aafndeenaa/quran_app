@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/logic/sura_item.dart';
 
 class QuranScreen extends StatelessWidget {
-  List<String> _suraName = [
+  final List<String> _suraName = [
     "الفاتحة",
     "البقرة",
     "آل عمران",
@@ -119,6 +119,8 @@ class QuranScreen extends StatelessWidget {
     "الناس"
   ];
 
+  QuranScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -134,7 +136,7 @@ class QuranScreen extends StatelessWidget {
               },
               separatorBuilder: (buildContext, index) {
                 return Container(
-                  margin: EdgeInsets.symmetric(horizontal: 50),
+                  margin: const EdgeInsets.symmetric(horizontal: 50),
                   color: Theme.of(context).primaryColor,
                   width: double.infinity,
                   height: 2,

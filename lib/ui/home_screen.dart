@@ -18,8 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
   var screens = [
     QuranScreen(),
     HadethScreen(),
-    SebhaScreen(),
-    RadioScreen(),
+    const SebhaScreen(),
+    const RadioScreen(),
   ];
 
   @override
@@ -40,7 +40,8 @@ class _HomeScreenState extends State<HomeScreen> {
               style: Theme.of(context).textTheme.subtitle1,
             ),
           ),
-          body: Container(padding: EdgeInsets.all(10), child: screens[_index]),
+          body: Container(
+              padding: const EdgeInsets.all(10), child: screens[_index]),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: _index,
             onTap: (index) {

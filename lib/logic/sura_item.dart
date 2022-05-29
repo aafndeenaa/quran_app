@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami/screens/sura_screen/sura_screen.dart';
+import 'package:islami/ui/sura_screen/sura_screen.dart';
 
 class SuraItem extends StatelessWidget {
   String suraName;
@@ -14,14 +14,12 @@ class SuraItem extends StatelessWidget {
         Navigator.pushNamed(context, SuraScreen.routeName,
             arguments: SuraModel(index: index, suraName: suraName));
       },
-      child: Container(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text(
-              suraName,
-              style: Theme.of(context).textTheme.headline1,
-            ),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Text(
+            suraName,
+            style: Theme.of(context).textTheme.headline1,
           ),
         ),
       ),

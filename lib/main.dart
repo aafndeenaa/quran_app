@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islami/screens/sura_screen/sura_screen.dart';
 import 'package:islami/ui/home_screen.dart';
 import 'package:islami/ui/theme.dart';
+
+import 'ui/sura_screen/sura_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +18,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'islami',
       routes: {
-        HomeScreen.routeName: (buildContext) => HomeScreen(),
-        SuraScreen.routeName: (buildContext) => SuraScreen(),
+        HomeScreen.routeName: (buildContext) => const HomeScreen(),
+        SuraScreen.routeName: (buildContext) => const SuraScreen(),
       },
       initialRoute: HomeScreen.routeName,
     );
